@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="MainWindow" prefHeight="499.0" prefWidth="753.0" stylesheets="@../css/Application.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.socialprojectgui.controller.AdminController">
+   <children>
+      <TableView fx:id="UserTableView" layoutX="14.0" layoutY="28.0" prefHeight="140.0" prefWidth="363.0">
+        <columns>
+          <TableColumn fx:id="lastName" prefWidth="75.33334159851074" text="LastName" />
+          <TableColumn fx:id="firstName" minWidth="0.0" prefWidth="127.33332061767578" text="FirstName" />
+            <TableColumn fx:id="emailID" prefWidth="75.33329772949219" text="Email" />
+            <TableColumn fx:id="passwordID" prefWidth="82.33331298828125" text="Password" />
+        </columns>
+      </TableView>
+      <Button id="addUserButton" layoutX="389.0" layoutY="113.0" minWidth="100.0" mnemonicParsing="false" onAction="#onAddButtonClick" text="Add User" />
+      <Button id="deleteUserButton" layoutX="389.0" layoutY="155.0" minWidth="100.0" mnemonicParsing="false" onAction="#onDeleteButtonClick" text="Delete User" />
+      <Button id="updateUserButton" layoutX="389.0" layoutY="193.0" minWidth="100.0" mnemonicParsing="false" onAction="#onUpdateButtonClick" text="Update User" />
+      <Button id="findUserButton" layoutX="389.0" layoutY="237.0" minWidth="100.0" mnemonicParsing="false" onAction="#onFindButtonClick" text="Find User" />
+      <TableView fx:id="FriendshipTableView" layoutX="456.0" layoutY="329.0" prefHeight="147.0" prefWidth="262.0">
+        <columns>
+          <TableColumn fx:id="userName" prefWidth="82.66668510437012" text="User" />
+          <TableColumn fx:id="friendsWith" prefWidth="80.66669464111328" text="FriendsWith" />
+            <TableColumn fx:id="friendsFrom" prefWidth="97.33329772949219" text="FriendsFrom" />
+        </columns>
+      </TableView>
+      <Button fx:id="deleteFriendshipButton" layoutX="385.0" layoutY="284.0" mnemonicParsing="false" onAction="#onDeleteFriendshipClick" text="Delete Friendship" />
+      <TableView fx:id="FriendRequestTableView" layoutX="38.0" layoutY="230.0" prefHeight="198.0" prefWidth="289.0">
+          <columns>
+              <TableColumn fx:id="fromWhom" prefWidth="96.00001525878906" text="Request from" />
+              <TableColumn fx:id="toWhom" prefWidth="82.0" text="Request to" />
+              <TableColumn fx:id="status" prefWidth="92.0" text="Request status" />
+          </columns>
+      </TableView>
+      <Button fx:id="showChatButton" onAction="#onshowChatButton" layoutX="577.0" layoutY="85.0" mnemonicParsing="false" text="Show Chat" />
+
+   </children>
+</AnchorPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="473.0" prefWidth="693.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.socialprojectgui.controller.UserController">
+   <children>
+      <TableView fx:id="friendsTable" layoutX="525.0" layoutY="224.0" prefHeight="200.0" prefWidth="153.0">
+        <columns>
+          <TableColumn fx:id="friendsID" prefWidth="151.99998982747397" text="Friends" />
+        </columns>
+      </TableView>
+      <TextField fx:id="searchText" layoutX="63.0" layoutY="31.0" />
+      <TableView fx:id="searchTable" layoutX="24.0" layoutY="66.0" prefHeight="200.0" prefWidth="228.0">
+        <columns>
+          <TableColumn fx:id="firstName" prefWidth="75.0" text="FirstName" />
+          <TableColumn fx:id="lastName" prefWidth="75.0" text="LastName" />
+            <TableColumn fx:id="email" prefWidth="75.0" text="Email" />
+        </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="35.0" text="Search" />
+      <Button fx:id="friendRequestbutton" layoutX="90.0" layoutY="274.0" mnemonicParsing="false" onAction="#onFriendRequestButton" text="Friend Request" />
+      <TableView fx:id="frFromTable" layoutX="260.0" layoutY="14.0" prefHeight="185.0" prefWidth="215.0">
+        <columns>
+          <TableColumn fx:id="frRequestFromId" prefWidth="128.66665649414062" text="FriendRequestFromWhom" />
+            <TableColumn fx:id="statusColumnFrom" prefWidth="83.33331298828125" text="Status" />
+        </columns>
+      </TableView>
+      <TableView fx:id="frToTable" layoutX="486.0" layoutY="14.0" prefHeight="185.0" prefWidth="201.0">
+        <columns>
+          <TableColumn fx:id="frRequestToId" prefWidth="111.3333740234375" text="FriendRequestToWhom" />
+            <TableColumn fx:id="statusColumnTo" prefWidth="88.6666259765625" text="Status" />
+        </columns>
+      </TableView>
+      <Button fx:id="denyButton" layoutX="394.0" layoutY="224.0" mnemonicParsing="false" onAction="#onDenyRequestButton" text="Deny" />
+      <Button fx:id="acceptButton" layoutX="298.0" layoutY="224.0" mnemonicParsing="false" onAction="#onAcceptRequestButton" text="Accept" />
+      <Label fx:id="nameLabel" layoutX="63.0" layoutY="380.0" prefHeight="52.0" prefWidth="261.0" text="Label">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Button layoutX="416.0" layoutY="406.0" mnemonicParsing="false" onAction="#onDeleteFriendshipClick" text="Delete Friend" />
+      <Button fx:id="newMessageButton" layoutX="414.0" layoutY="338.0" mnemonicParsing="false" onAction="#onNewMessageButton" text="New Message" />
+      <Button fx:id="chatButton" layoutX="433.0" layoutY="287.0" mnemonicParsing="false" onAction="#onChatButton" text="Chat" />
+      <Button fx:id="previousButton" layoutX="504.0" layoutY="432.0" mnemonicParsing="false" onAction="#onPrevious" text="Previous" />
+      <Button fx:id="nextButton" layoutX="636.0" layoutY="432.0" mnemonicParsing="false" onAction="#onNext" text="Next" />
+      <Spinner fx:id="spinnerId"  editable="true" layoutX="575.0" layoutY="432.0" prefHeight="25.0" prefWidth="53.0" />
+   </children>
+</AnchorPane>

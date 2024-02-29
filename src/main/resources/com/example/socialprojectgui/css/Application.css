@@ -1,0 +1,7 @@
+#UserTableView{
+    -fx-border-color: black;
+
+}
+#UserTableView.button{
+    -fx-background-color: black;
+}
